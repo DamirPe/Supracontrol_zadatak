@@ -1,0 +1,169 @@
+<div class="actionButtonsHeader">
+    <div>
+        <h2>KORISNICI</h2>
+    </div>
+    <div class="button-container">
+        <!-- Edit Button -->
+        <button class="btn edit">
+        <i class="fas fa-pen"></i>
+        </button>
+
+        <!-- Delete Button -->
+        <button class="btn delete">
+        <i class="fas fa-trash"></i>
+        </button>
+
+        <!-- Search Button -->
+        <div class="search-wrapper">
+        <button class="btn search" id="searchBtn">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Pretraži" />
+        </button>
+        </div>
+
+        <!-- Add Button -->
+        <button class="btn add" (click)="togglePopup()">
+        <i class="fas fa-plus"></i>
+        </button>
+    </div>
+</div>
+
+<!-- DevExtreme Data Grid -->
+<dx-data-grid
+  [dataSource]="users"
+  [showBorders]="true"
+  [selection]="{ mode: 'multiple' }"
+  [columnAutoWidth]="true">
+
+  <!-- Custom Template for Checkboxes -->
+    <dx-check-box></dx-check-box>
+
+  <!-- User Data Columns -->
+  <dxi-column dataField="ime" caption="Ime"></dxi-column>
+  <dxi-column dataField="prezime" caption="Prezime"></dxi-column>
+  <dxi-column dataField="email" caption="Email"></dxi-column>
+  <dxi-column dataField="telefon" caption="Telefon"></dxi-column>
+  <dxi-column dataField="role" caption="Role"></dxi-column>
+  <dxi-column dataField="radnoMjesto" caption="Radno Mjesto"></dxi-column>
+  <dxi-column dataField="drzava" caption="Drzava"></dxi-column>
+  <dxi-column dataField="grad" caption="Grad"></dxi-column>
+
+</dx-data-grid>
+
+<dx-popup
+    contentTemplate="popup-content"
+    [(visible)]="isPopupVisible"
+    [hideOnOutsideClick]="true">
+    <div *dxTemplate="let data of 'popup-content'">
+        <div class="userEditForm">
+            <!-- Left Section -->
+            <div class="formSection">
+              <div>
+                <label for="ime">Ime *</label>
+                <input type="text" id="ime" name="ime" required />
+              </div>
+          
+              <div>
+                <label for="prezime">Prezime *</label>
+                <input type="text" id="prezime" name="prezime" required />
+              </div>
+          
+              <div>
+                <label for="spol">Spol *</label>
+                <select id="spol" name="spol" required>
+                  <option value="">Select...</option>
+                  <option value="muski">Muški</option>
+                  <option value="zenski">Ženski</option>
+                </select>
+              </div>
+          
+              <div>
+                <label for="radnoMjesto">Radno mjesto *</label>
+                <select id="radnoMjesto" name="radnoMjesto" required>
+                  <option value="">Select...</option>
+                </select>
+              </div>
+          
+              <div>
+                <label for="biljeske">Bilješke</label>
+                <textarea id="biljeske" name="biljeske"></textarea>
+              </div>
+            </div>
+          
+            <!-- Middle Section -->
+            <div class="formSection">
+              <div>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="example@example.com" />
+              </div>
+          
+              <div>
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="+385123456789" />
+              </div>
+          
+              <div>
+                <label for="drzava">Država *</label>
+                <select id="drzava" name="drzava" required>
+                  <option value="">Select...</option>
+                </select>
+              </div>
+          
+              <div>
+                <label for="grad">Grad *</label>
+                <select id="grad" name="grad" required>
+                  <option value="">Select...</option>
+                </select>
+              </div>
+          
+              <div>
+                <label for="adresa">Adresa</label>
+                <input type="text" id="adresa" name="adresa" />
+              </div>
+            </div>
+          
+            <!-- Right Section -->
+            <div class="formSection">
+              <div>
+                <label for="korisnickoIme">Korisničko ime *</label>
+                <input type="text" id="korisnickoIme" name="korisnickoIme" required />
+              </div>
+          
+              <div>
+                <label for="novaLozinka">Nova lozinka</label>
+                <div class="password-wrapper">
+                  <input type="password" id="novaLozinka" name="novaLozinka" />
+                  <button type="button" class="toggle-password">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+          
+              <div>
+                <label for="potvrdiLozinku">Potvrdi lozinku</label>
+                <div class="password-wrapper">
+                  <input type="password" id="potvrdiLozinku" name="potvrdiLozinku" />
+                  <button type="button" class="toggle-password">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+          
+              <div>
+                <label for="role">Role *</label>
+                <div id="role">
+                  <div>
+                    <input type="checkbox" id="administrator" name="role" value="Administrator" />
+                    <label for="administrator">Administrator</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="user" name="role" value="User" />
+                    <label for="user">User</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                   
+    </div>
+</dx-popup>

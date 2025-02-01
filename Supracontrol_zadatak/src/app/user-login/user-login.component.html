@@ -1,0 +1,28 @@
+<div class="loginContainer">
+  <div class="loginBox">
+      <div>
+        <form class="formGrupa" [formGroup]="loginForma" (ngSubmit)="onSubmit()">
+          <div>
+            <img src="../../assets/SC_vertical.png" alt="logo">
+          </div>
+          <div><b>Welcome.</b> Please log in.</div>
+          <!-- Name Input -->
+          <div>
+            <input id="username" type="text" formControlName="username" placeholder="Usename">
+          </div>
+      
+          <!-- Password Input -->
+          <div>
+            <input id="password" type="password" formControlName="password" placeholder="Password">
+          </div>
+      
+          <!-- Submit Button -->
+          <button type="submit">Log in</button>
+          <div class="validationCheckDiv">
+            <div *ngIf="!loginForma.get('password').valid && setOnSubmit">Forgot password</div>
+            <div *ngIf="!loginForma.get('username').valid && setOnSubmit">Forgot username</div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>

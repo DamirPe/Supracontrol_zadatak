@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+}
+
+.dx-datagrid-rowsview .dx-select-checkboxes-hidden > tbody > tr > td > .dx-select-checkbox {
+    display: box;
+}

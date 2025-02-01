@@ -1,0 +1,100 @@
+.actionButtonsHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: rgb(237, 241, 246);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5rem 1rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    padding: 0.5rem 0.5rem;
+    width: max-content;
+    height: fit-content;
+}
+
+.btn {
+    border: none;
+    background-color: #c1c3c6; /* Light gray background */
+    color: #333; /* Dark text color */
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+.edit {
+    color: #aba0a0;
+}
+
+.delete {
+    color: #aba0a0;
+}
+
+.add {
+    color: white;
+    background-color: rgb(3, 176, 3);
+    height: 40px;
+    width: 40px;
+    border-radius: 10000000px;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search {
+    color: #6c757d;
+}
+
+.active i {
+    color: rgb(251, 163, 0);
+    padding-right: 10px;
+}
+
+.search-input {
+    width: 0;
+    border: none;
+    font-size: 14px;
+    display: none;
+    height: -webkit-fill-available;
+    background-color: #c1c3c6;
+    color: #333;
+    border-left: 2px solid #6c757d;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-wrapper.active .search-input {
+    width: 150px;
+    display: block;
+}
+
+.userEditForm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: -webkit-fill-available;
+}
+
+.formSection {
+    height: 100%;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
