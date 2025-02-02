@@ -13,22 +13,23 @@
     background-color: rgb(26, 26, 26);
     padding: 2rem;
     border-radius: 1rem;
+    width: 300px;
 }
 
 .formGrupa div{
     margin-bottom: 0.7rem;
 }
 
-button{
-    
+button#loginBtn{
     margin-top: 0.7rem;
     background-color: rgb(96, 175, 70);
     color: white;
     width: 100%;
     border: none;
-    border-radius: 0.1rem;
+    border-radius: 5px;
     padding: 0.5rem 0.1rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .validationCheckDiv{
@@ -41,12 +42,17 @@ button{
 .validationCheckDiv div{
    margin-bottom: 0px;
    font-family: Arial, Helvetica, sans-serif;
-   font-size: small;
+   font-size: medium;
+   cursor: pointer;
 }
 
 input {
     width: -webkit-fill-available;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
 }
 
 input:focus {
@@ -55,4 +61,40 @@ input:focus {
 
 img {
     max-width: 12rem;
+    margin: auto;
+}
+
+#logoDiv{
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcomeText {
+    font-size: large;
+}
+
+.password-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.password-wrapper input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.toggle-password{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: grey;
 }

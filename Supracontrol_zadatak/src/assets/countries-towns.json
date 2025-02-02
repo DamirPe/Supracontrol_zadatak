@@ -1,0 +1,48 @@
+{
+    "countries": [
+      "Hrvatska", "Srbija", "Bosna i Hercegovina", "Crna Gora", "Albanija",
+      "Rumunjska", "Bugarska", "Makedonija", "Grčka", "Kosovo"
+    ],
+    "towns": [
+      { "name": "Zagreb", "country": "Hrvatska" },
+      { "name": "Split", "country": "Hrvatska" },
+      { "name": "Rijeka", "country": "Hrvatska" },
+  
+      { "name": "Beograd", "country": "Srbija" },
+      { "name": "Novi Sad", "country": "Srbija" },
+      { "name": "Niš", "country": "Srbija" },
+  
+      { "name": "Sarajevo", "country": "Bosna i Hercegovina" },
+      { "name": "Banja Luka", "country": "Bosna i Hercegovina" },
+      { "name": "Mostar", "country": "Bosna i Hercegovina" },
+  
+      { "name": "Podgorica", "country": "Crna Gora" },
+      { "name": "Nikšić", "country": "Crna Gora" },
+      { "name": "Bar", "country": "Crna Gora" },
+  
+      { "name": "Tirana", "country": "Albanija" },
+      { "name": "Drač", "country": "Albanija" },
+      { "name": "Valona", "country": "Albanija" },
+  
+      { "name": "Bukurešt", "country": "Rumunjska" },
+      { "name": "Kluž", "country": "Rumunjska" },
+      { "name": "Temišvar", "country": "Rumunjska" },
+  
+      { "name": "Sofija", "country": "Bugarska" },
+      { "name": "Plovdiv", "country": "Bugarska" },
+      { "name": "Varna", "country": "Bugarska" },
+  
+      { "name": "Skoplje", "country": "Makedonija" },
+      { "name": "Bitola", "country": "Makedonija" },
+      { "name": "Ohrid", "country": "Makedonija" },
+  
+      { "name": "Atena", "country": "Grčka" },
+      { "name": "Solun", "country": "Grčka" },
+      { "name": "Patras", "country": "Grčka" },
+  
+      { "name": "Priština", "country": "Kosovo" },
+      { "name": "Peć", "country": "Kosovo" },
+      { "name": "Uroševac", "country": "Kosovo" }
+    ]
+  }
+  

@@ -5,3 +5,14 @@ body {
 .dx-datagrid-rowsview .dx-select-checkboxes-hidden > tbody > tr > td > .dx-select-checkbox {
     display: box;
 }
+
+.dx-datagrid .dx-datagrid-headers {
+    background-color: rgb(237, 241, 246);
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.dx-datagrid-rowsview .dx-select-checkboxes-hidden .dx-select-checkbox {
+    display: inline-block !important;
+}

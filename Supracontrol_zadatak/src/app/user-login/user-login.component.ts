@@ -22,8 +22,9 @@ export class UserLoginComponent implements OnInit{
           Validators.required,
           Validators.minLength(8),
         ])
-    })
+    })      
   }
+
 
   onSubmit() {
     this.setOnSubmit = true;
@@ -40,8 +41,11 @@ export class UserLoginComponent implements OnInit{
     
     console.log(loginData);
     this.authenticationService.login(credentials);
-  
-    
   }
   
+  isPasswordVisible: boolean = false;
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
 }
